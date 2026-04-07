@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --wa-green: #008069;
+  --wa-green-light: #25d366;
+  --wa-bg: #f0f2f5;
+  --wa-white: #ffffff;
+  --wa-text-primary: #111b21;
+  --wa-text-secondary: #667781;
+  --wa-border: #e9edef;
+  --wa-msg-own: #d9fdd3;
+  --wa-msg-other: #ffffff;
+  --wa-sidebar-bg: #ffffff;
+  --wa-chat-bg: #efeae2;
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--wa-bg);
+  color: var(--wa-text-primary);
+  height: 100vh;
+  overflow: hidden;
+}
+
+input, button {
+  font-family: inherit;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--wa-bg);
+}
+
+.auth-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card h2 {
+  margin-bottom: 1.5rem;
+  color: var(--wa-green);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--wa-text-secondary);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--wa-border);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: var(--wa-green);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--wa-green);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.auth-switch {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--wa-text-secondary);
+}
+
+.auth-switch span {
+  color: var(--wa-green);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Chat Layout */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1600px;
+  margin: 0 auto;
+  box-shadow: 0 0 40px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  width: 30%;
+  min-width: 300px;
+  max-width: 450px;
+  background: var(--wa-sidebar-bg);
+  border-right: 1px solid var(--wa-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-window {
+  flex: 1;
+  background-color: var(--wa-chat-bg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
